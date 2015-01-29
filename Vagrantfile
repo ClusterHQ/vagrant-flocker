@@ -11,8 +11,8 @@ VAGRANTFILE_API_VERSION = "2"
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
 
 $script = <<SCRIPT
-docker pull clusterhq/flask
-docker pull dockerfile/redis
+sudo docker pull clusterhq/flask
+sudo docker pull dockerfile/redis
 SCRIPT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
