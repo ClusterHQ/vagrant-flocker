@@ -10,11 +10,6 @@ VAGRANTFILE_API_VERSION = "2"
 
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
 
-$script = <<SCRIPT
-sudo docker pull clusterhq/flask
-sudo docker pull dockerfile/redis
-SCRIPT
-
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "clusterhq/flocker-tutorial"
   config.vm.box_version = "= 0.3.2"
@@ -32,6 +27,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     node2.vm.network :private_network, :ip => "172.16.255.251"
     node2.vm.hostname = "node2"
   end
-
-  config.vm.provision "shell", inline: $script, privileged: false
 end
