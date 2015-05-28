@@ -9,5 +9,7 @@ This means that you can run your databases, queues and key-value stores in Docke
 
 For more information on Flocker visit https://docs.clusterhq.com or https://github.com/ClusterHQ/flocker.
 
+**Note**: This repository is no longer in use for versions of Flocker after 0.4.0.
+
 .. _`Getting Started guide`: https://docs.clusterhq.com/en/latest/gettingstarted/index.html
 .. _ClusterHQ: https://clusterhq.com/
